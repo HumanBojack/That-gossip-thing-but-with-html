@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>The Gossip Project</title>
+</head>
+
+<body>
+	<h1>Bienvenue sur LE site de gossips de THP</h1>
+	<p>La liste de tous les gossips arrive bientôt, mais vous pouvez en créer un <a href="/gossips/new/">juste ici</a></p>
+	<table>
+	<% gossips.each_with_index do |gossip, gossip_index| %>
+		<tr>
+			<th><%= gossip.author %></th>
+			<th><%= gossip.content %></th>
+			<th><a href="gossips/<%=gossip_index%>">View</a></th>
+		</tr>
+	<% end %>
+	</table>
+</body>
+
+</html>
