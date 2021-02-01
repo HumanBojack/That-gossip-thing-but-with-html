@@ -9,6 +9,13 @@
 	<p>Contenu: <%= gossip.content %></p>
 	<p><a href="/">Revenir au menu</a></p>
 	<p><a href="/gossips/<%= id %>/edit/">Edit</a></p>
+	<p><%= comments %></p>
+		<form action="/gossips/<%= id %>/" method="POST">
+			Entre ton nom : <input typer="text" name="comment_author"/><br/>
+			Entre ton commentaire : <input type="text" name="comment"/><br/>
+			<input type="submit"/>
+		</form>
+
 </body>
 
 </html>
